@@ -1,13 +1,12 @@
 <div class="container">
-  <h1>Install Bootstrap 5 in Angular 13 - ItSolutionStuff.com</h1>
-  <div class="card">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="row justify-content-sm-center-center">
+    <app-header (selectedNavOption)="onNavigate($event)"></app-header>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
   </div>
 </div>

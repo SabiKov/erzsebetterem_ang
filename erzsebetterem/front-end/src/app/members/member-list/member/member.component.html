@@ -1,0 +1,52 @@
+<div class="accordion-item">
+  <h2 class="accordion-header" [id]="'heading' + indexStr">
+    <button class="accordion-button"
+            [ngClass]="{'collapsed' : index != 0}"
+            type="button"
+            data-bs-toggle="collapse"
+            [attr.data-bs-target]="'#collapse' + indexStr"
+            aria-expanded="false"
+            [attr.aria-controls]="'collapse' + indexStr">
+      Name: {{ member.name }}
+    </button>
+  </h2>
+  <div [id]="'collapse' + indexStr"
+       class="accordion-collapse collapse"
+       [ngClass]="{ 'show': index == 0 }"
+       [attr.aria-labelledby]="'heading' + indexStr"
+       data-bs-parent="#accordionMember">
+    <div class="accordion-body">
+      <a href="#" class="list-group-item" clearfix>
+        <div>
+          <p class="list-group-item-text">Start date: {{ member.startDate }}
+              <a
+                class="btn btn-success btn-sm"
+                href="#"
+                role="button"
+                (click)="onSelected('renewMembership', member.id)">
+                Renew membership</a>
+          </p>
+          <p class="list-group-item-text">End Date: {{ member.endDate }}</p>
+        </div>
+      </a>
+      <div class="d-flex justify-content-sm-between">
+          <a class="btn btn-warning btn-sm"
+             href="#"
+             role="button"
+             (click)="onSelected('editMember', member.id)">Edit</a>
+          <a class="btn btn-secondary btn-sm"
+             [routerLink]="['/member-status', member.id, 'inactive']"
+             [queryParams]="{allowStatusChange: member.id}"
+             fragment="loading"
+             href="#"
+             role="button"
+             (click)="onSelected('inactivateMember', member.id)">Inactivate</a>
+          <a class="btn btn-danger btn-sm"
+             href="#"
+             role="button"
+
+             (click)="onSelected('deleteMember', member.id)">Delete</a>
+      </div>
+    </div>
+  </div>
+</div>

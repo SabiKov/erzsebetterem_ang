@@ -1,0 +1,18 @@
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <input type="text" class="form-control" [(ngModel)]="filteredMember" />
+    </div>
+  </div>
+  <hr>
+  <div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <div class="accordion" id="accordionMember">
+        <app-member
+          *ngFor="let memberEl of members filter:filteredMember; let i = index"
+          [member]="memberEl"
+          [index]=i
+          (memberSelected)="onMemberSelected(memberEl)">
+        </app-member>
+      </div>
+    </div>
+  </div>

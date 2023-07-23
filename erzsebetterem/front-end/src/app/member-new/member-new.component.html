@@ -1,0 +1,82 @@
+<div class="row justify-content-md-center">
+  <div class="col-md-6">
+    <button class="btn btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#newMemberModal">New Member
+    </button>
+  </div>
+  <!-- Modal -->
+  <div class="modal fade"
+       id="newMemberModal"
+       tabindex="-1"
+       aria-labelledby="newMemberModalLabel"
+       aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title"
+              id="exampleModalLabel">Add new member
+          </h5>
+          <button type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="newMemberInputName" class="form-label">Name</label>
+              <input type="text"
+                     class="form-control"
+                     id="newMemberInputName"
+                     aria-describedby="nameHelp">
+              <div id="nameHelp"
+                   class="form-text">Member's name</div>
+            </div>
+            <div class="mb-3">
+              <label for="startDateInput" class="form-label">Start date</label>
+              <input type="date"
+                     class="form-control"
+                     id="startDateInput"
+                     aria-describedby="startDateHelp">
+              <div id="startDateHelp"
+                   class="form-text">Membership start date</div>
+            </div>
+            <div class="mb-3">
+              <label for="expireDateInput" class="form-label">Expire date</label>
+              <input type="date"
+                     class="form-control"
+                     id="expireDateInput"
+                     aria-describedby="expireDateHelp">
+              <div id="expireDateHelp"
+                   class="form-text">Membership last date</div>
+            </div>
+            <div class="mb-3">
+              <label for="newMemberInputEmail" class="form-label">Email address</label>
+              <input type="email"
+                     class="form-control"
+                     id="newMemberInputEmail"
+                     aria-describedby="emailHelp">
+              <div id="emailHelp"
+                   class="form-text">Member's email address</div>
+            </div>
+            <div class="mb-3">
+              <label for="newMemberInputNote" class="form-label">Note</label>
+              <input type="email"
+                     class="form-control"
+                     id="newMemberInputNote"
+                     aria-describedby="noteHelp">
+              <div id="noteHelp"
+                   class="form-text">Additional detail</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
