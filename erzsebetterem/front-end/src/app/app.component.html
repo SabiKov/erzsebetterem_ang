@@ -1,35 +1,12 @@
-<app-header></app-header>
 <div class="container">
-  <h1>Install Bootstrap 5 in Angular 13 - ItSolutionStuff.com</h1>
-  <div class="card">
-    <div class="card-header">
-      Featured
-    </div>
-    <div class="card-body">
-      <h5 class="card-title">Special title treatment</h5>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+  <div class="row justify-content-sm-center-center">
+    <app-header (selectedNavOption)="onNavigate($event)"></app-header>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-9">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
     </div>
   </div>
-  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
-       viewBox="0 0 16 16">
-    <path
-      d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z">
-    </path>
-  </svg>
-  <h3>Bootstrap Icons class Angular Button and Input form example</h3>
-  <button type="button" class="btn btn-primary">
-    <i class="bi bi-search"></i>
-
-    Button
-  </button>
-  <div class="input-group w-50">
-  <span class="input-group-text" id="basic-addon1">
-    <i class="bi bi-search"></i>
-
-  </span>
-    <input type="text" class="form-control" placeholder="Input group example" aria-label="Input group example"
-           aria-describedby="basic-addon1">
-  </div>
-
 </div>
