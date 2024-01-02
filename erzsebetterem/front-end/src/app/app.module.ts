@@ -11,22 +11,9 @@ import { MemberEditComponent } from './members/member-list/member-edit/member-ed
 import { MemberNewComponent } from './member-new/member-new.component';
 import { MembersComponent } from './members/members.component';
 import { MemberDeleteComponent } from './members/member-list/member-delete/member-delete.component';
-import {RouterModule, Routes} from "@angular/router";
 import { ManagePriceComponent } from './manage-price/manage-price.component';
-import {MaintenanceComponent} from "./maintenance/maintenance.component";
 import { MemberStatusComponent } from './members/member-list/member-status/member-status.component';
-
-const appRoute: Routes = [
-  { path: '', component: MemberListComponent },
-  { path: 'members', component: MembersComponent },
-  { path: 'member-new', component: MemberNewComponent },
-  { path: 'member-delete/:id', component: MemberDeleteComponent },
-  { path: 'member-edit/:id', component: MemberEditComponent },
-  { path: 'member-status/:id', component: MemberStatusComponent },
-  { path: 'manage-price', component: ManagePriceComponent },
-  { path: 'maintenance', component: MaintenanceComponent }
-
-];
+import {AppRoutingModule} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -43,9 +30,9 @@ const appRoute: Routes = [
     MemberStatusComponent
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(appRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]

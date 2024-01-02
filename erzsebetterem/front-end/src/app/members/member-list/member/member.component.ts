@@ -26,15 +26,16 @@ export class MemberComponent implements OnInit {
     if(selectedButton === 'renewMembership') {
       console.log(selectedButton + "id: " + id);
       console.log(selectedButton);
-      this.router.navigate(['/member']);
+      this.router.navigate(['/member', id]);
     }
     else if(selectedButton === 'editMember') {
-      console.log(selectedButton + "id: " + id);
-      this.router.navigate(['/member-edit']);
+      // console.log(selectedButton + "id: " + id);
+      // console.log(selectedButton + '/member-edit/' + id);
+      this.router.navigate(['/member-edit/', id]);
     }
     else if(selectedButton === 'inactivateMember') {
       console.log(selectedButton + "id: " + id);
-      this.router.navigate(['/member-status']);
+      this.router.navigate(['/member-status', id]);
     }
     else if(selectedButton === 'deleteMember') {
       console.log(selectedButton + "id: " + id);
